@@ -1,5 +1,5 @@
 body {
-    background-color: #BCBABE;
+    background-color: #e9e9e9;
     font-family: Avenir, Geneva, Arial, sans-serif;
     font-size: 18px;
     color: #F1F1F2;
@@ -10,7 +10,7 @@ body {
     padding: 0;
 }
 .header {
-    background-color: #1995AD;
+    background-color: white;
 }
 
 .jose-velez {
@@ -52,7 +52,7 @@ a:hover {
 }
 
 a:active {
-    color: #FFFFFF;
+    color: #008080;
     text-decoration: underline;
 }
 
@@ -60,7 +60,7 @@ a:active {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(255,255,255);
+    background-color: white; 
     border: 1px black solid;
     border-left-style: none;
     border-right-style: none;
@@ -90,9 +90,8 @@ p {
     padding: 5px 20px;
     text-align: center;
     font-size: 80%;
-    background-color: #A1E6E2; 
+    background-color: #003c3c; 
     bottom: 0;
-    position: fixed;
     width: 100%;
     left: 0;
 }
