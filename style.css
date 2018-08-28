@@ -87,6 +87,10 @@ p {
     padding: 20px;
 }
 
+.timeline {
+    clear: both;
+}
+
 .timelinebox {
     border: 1px solid white;
     color: black;
@@ -94,7 +98,7 @@ p {
     text-align: center;
     text-decoration: none;
     float: left;
-    width: 30%;
+    width: 23%;
     display: inline-block;
     font-size: 16px;
 }
