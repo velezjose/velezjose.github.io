@@ -102,6 +102,7 @@ p {
 #right-arrow {
     font-size: 50px;
     float: left;
+    padding: 200px 0px 0px 0px;
 }
 
 #footer {
