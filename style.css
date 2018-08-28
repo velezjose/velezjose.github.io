@@ -16,13 +16,13 @@ body {
 
 .jose-velez {
     float: left;
-    padding: 19px 60px 15px 30px;
+    padding: 17px 60px 15px 30px;
     font-size: 20px;
 }
 
 .button {
     color: black;
-    padding: 10px 30px;
+    padding: 8px 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
