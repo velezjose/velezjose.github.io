@@ -94,8 +94,13 @@ p {
     text-align: center;
     text-decoration: none;
     float: left;
+    width: 30%;
     display: inline-block;
     font-size: 16px;
+}
+
+#right-arrow {
+    font-size: 5px;
 }
 
 #footer {
