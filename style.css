@@ -86,11 +86,14 @@ p {
 
 #footer {
     clear: both;
-    padding: 10px 20px;
+    padding: 5px 20px;
     text-align: center;
     font-size: 80%;
     background-color: black; 
     bottom: 0;
+    position: fixed;
+    width: 100%;
+    left: 0;
 }
 
 .footer-text {
