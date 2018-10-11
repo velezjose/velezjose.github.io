@@ -48,11 +48,12 @@
 
 
 <body>
-    <div id="entire-website-header"></div>
+    <nav id="entire-website-header"></nav>
 
-    <div class="content about-me">
+    <section class="content about-me">
         <img src="images/faceimage.png" align="middle" style="box-shadow: 0 4px
-        8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+        8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" alt="Image
+        of my face">
 
         <p>Hello world!</p>
 
@@ -66,26 +67,32 @@
 
         <p>Some of my accomplishments in life:</p>
 
-        <div class="timeline">
-            <div class="timelinebox">
-                Colegio San Jos&eacute <br>
-                <img src="images/CSJ.gif" width="170px">
-            </div>
+        <section class="timeline">
+            <a href="https://www.csjpr.org/">
+                <div class="timelinebox">
+                    Colegio San Jos&eacute <br>
+                    <img src="images/CSJ.gif" width="170px">
+                </div>
+            </a>
 
-            <span id="right-arrow">&rarr;</span>
+            <span class="right-arrow">&rarr;</span>
 
-            <div class="timelinebox">
-                Johns Hopkins University <br>
-                <img src="images/JHU.png" width="130px">
-            </div>
+            <a href="https://www.jhu.edu/">
+                <div class="timelinebox">
+                    Johns Hopkins University <br>
+                    <img src="images/JHU.png" width="130px">
+                </div>
+            </a>
 
-            <span id="right-arrow">&rarr;</span>
+            <span class="right-arrow">&rarr;</span>
 
-            <div class="timelinebox">
-                Hack Reactor <br>
-                <img src="images/HR.png" width=240px">
-            </div>
-        </div>
+            <a href="https://www.hackreactor.com/">
+                <div class="timelinebox">
+                    Hack Reactor <br>
+                    <img src="images/HR.png" width=240px">
+                </div>
+            </a>
+        </section>
 
         <p>I have many interests and goals regarding how I want my life to
             unravel. Communicating myself to the world
@@ -112,9 +119,9 @@
         <p>Find my R&eacutesum&eacute <u><a
             href='https://www.google.com'>here</a></u>.
         </p>
-    </div>
+    </section>
 
-    <div id="footer"></div>
+    <footer id="footer"></footer>
 
     <script src="scripts/sticky-function.js"></script>
 

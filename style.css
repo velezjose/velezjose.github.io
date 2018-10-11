@@ -85,6 +85,7 @@ a:active {
 
 p {
     padding: 20px;
+    clear: both;
 }
 
 .timeline {
@@ -99,14 +100,20 @@ p {
     text-decoration: none;
     float: left;
     width: 23%;
+    height: 200px;
+    border-radius: 20px;
     display: inline-block;
     font-size: 16px;
 }
 
-#right-arrow {
+.timelinebox:hover {
+    background-color: #326262;
+}
+
+.right-arrow {
     font-size: 50px;
     float: left;
-    padding: 200px 0px 0px 0px;
+    padding: 95px 0px 90px 0px;
 }
 
 #footer {
