@@ -50,6 +50,8 @@
 <body>
     <nav id="entire-website-header"></nav>
 
+    <nav hidden id="mySidenav" class="sidenav"></nav>
+
     <section class="content about-me">
         <img src="images/faceimage.png" align="middle" style="box-shadow: 0 4px
         8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" alt="Image
@@ -61,7 +63,7 @@
             href="https://en.wikipedia.org/wiki/Anatomically_modern_human">
             anatomically modern</a></u> human. I was born and raised in San Juan,
             Puerto Rico. I graduated from Johns Hopkins University last May 2018,
-            a Bachelor's of Science in Physics, a Bachelor's of Science in
+            with a Bachelor's of Science in Physics, a Bachelor's of Science in
             Neuroscience and a Minor in Mathematics.
         </p>
 
@@ -124,6 +126,15 @@
     <footer id="footer"></footer>
 
     <script src="scripts/sticky-function.js"></script>
+    <script>
+        function openNav() {
+            $('#mySidenav').css('width', '250px');
+            $('#mySidenav').css('display', 'block');
+        }
+        function closeNav() {
+            document.getElementById('#mySidenav').css('width', '0');
+        }
+    </script>
 
 </body>
 </html>
