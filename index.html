@@ -10,18 +10,22 @@
     <link type="text/css" rel="stylesheet" href="style.css">
     <link rel="import" href="head-stuff.html">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Load icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="scripts/load-header-and-footer-main.js"></script>
+    <script src="scripts/sidenav.js"></script>
 </head>
 
 
 <body>
     <nav id="entire-website-header"></nav>
 
-    <nav hidden id="mySidenav" class="sidenav"></nav>
+    <nav hidden id="sidenav" class="sidenav"></nav>
 
     <section class="content about-me">
         <img src="images/faceimage.png" align="middle" style="box-shadow: 0 4px
-        8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" alt="Image
+        8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-top: 50px;" alt="Image
         of my face">
 
         <p>Hello world!</p>
@@ -38,27 +42,27 @@
 
         <section class="timeline">
             <a href="https://www.csjpr.org/" target="_blank">
-                <div class="timelinebox">
-                    Colegio San Jos&eacute; <br>
-                    <img src="images/CSJ.gif" style="width:170px;padding-top:15px;">
+                <div class="timelinebox" id='first-tlb'>
+                    Colegio San Jos&eacute;<br>
+                    <img src="images/CSJ.gif" style="width:140px;padding-top:20px;">
                 </div>
             </a>
 
-            <span class="right-arrow">&rarr;</span>
+            <div class="right-arrow">&nbsp;&rarr;&nbsp;</div>
 
             <a href="https://www.jhu.edu/" target="_blank">
                 <div class="timelinebox">
-                    Johns Hopkins University <br>
-                    <img src="images/JHU.png" width="130px">
+                    Johns Hopkins University<br>
+                    <img src="images/JHU.png" style="width:110px;padding-top: 15px;">
                 </div>
             </a>
 
-            <span class="right-arrow">&rarr;</span>
+            <div class="right-arrow">&nbsp;&rarr;&nbsp;</div>
 
             <a href="https://www.hackreactor.com/" target="_blank">
                 <div class="timelinebox">
-                    Hack Reactor <br>
-                    <img src="images/HR.png" style="width:240px;padding-top:43px;">
+                    Hack Reactor<br>
+                    <img id="hr-pic" src="images/HR.png" style="max-width:230px;padding-top:43px;">
                 </div>
             </a>
         </section>
@@ -91,16 +95,6 @@
     </section>
 
     <footer id="footer"></footer>
-
-    <script>
-        function openNav() {
-            $('#mySidenav').css('width', '250px');
-            $('#mySidenav').css('display', 'block');
-        }
-        function closeNav() {
-            $('#mySidenav').css('width', '0');
-        }
-    </script>
 
 </body>
 </html>

@@ -57,17 +57,13 @@ body {
 }
 
 @media screen and (max-width: 949px) {
-    #logo-text {
-        padding-top: 25px;
-    }
-
     .topnav a:not(#first-child):not(.hamburger), .sidenav {
         display: none;
     }
 
     .topnav a.hamburger {
         float: right;
-        padding: 25px 30px 10px 30px;
+        padding: 2px 30px 0px 30px;
     }
 
     .sidenav {
@@ -137,27 +133,13 @@ a:active {
     text-decoration: underline;
 }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: white; 
-    border: 1px black solid;
-    border-left-style: none;
-    border-right-style: none;
-}
-
-.sticky + .content {
-    padding-top: 94px;
-}
-
 .about-me {
     text-align: center;
 }
 
 .content {
-    width: 80%;
-    padding: 10%;
+    width: 90%;
+    padding: 5%;
     clear: both;
 }
 
@@ -168,6 +150,7 @@ p {
 
 .timeline {
     clear: both;
+    left: 10%;
 }
 
 .timelinebox {
@@ -176,7 +159,9 @@ p {
     text-align: center;
     text-decoration: none;
     float: left;
-    width: 23%;
+    width: 20%;
+    min-width: 200px;
+    padding: 3%;
     height: 200px;
     border-radius: 20px;
     display: inline-block;
@@ -192,6 +177,27 @@ p {
     animation-duration: 1s;
 }
 
+.right-arrow {
+    font-size: 50px;
+    float: left;
+    padding: 95px 0px 90px 0px;
+}
+
+@media screen and (max-width:1142px) {
+    .timelinebox {
+        padding: 10px;
+        margin-left: 3%;
+    }
+
+    .right-arrow {
+      padding-top: 75px;
+    }
+
+    img#hr-pic {
+        width: 90%;
+    }
+}
+
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes example {
     from {background-color: inherit;}
@@ -204,17 +210,12 @@ p {
     to {background-color: #c1cfcf;}
 }
 
-.right-arrow {
-    font-size: 50px;
-    float: left;
-    padding: 95px 0px 90px 0px;
-}
-
 #footer {
     padding: 5px 0px;
+    padding-top: 7px;
     text-align: center;
     font-size: 80%;
-    background-color: #326262; 
+    background: linear-gradient(to left, #D7FAC8, #648880, #293f50);
     width: 100%;
     bottom: 0;
     position: relative;
