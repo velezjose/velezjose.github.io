@@ -171,7 +171,6 @@ p {
 }
 
 .timelinebox {
-    border: 1px solid white;
     color: black;
     padding: 30px;
     text-align: center;
@@ -186,6 +185,7 @@ p {
 
 .timelinebox:hover {
     background-color: #c1cfcf;
+    border-color: #c1cfcf;
     -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
     animation-name: example;
