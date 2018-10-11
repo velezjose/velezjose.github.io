@@ -8,41 +8,8 @@
         content="e50Ayqr5Ywb1AS71W1RPwgcIf6hBFP0EZuPa1MegyN0" />
     <title>J.V. - Home</title>
     <link type="text/css" rel="stylesheet" href="style.css">
-
-    <link rel="apple-touch-icon" sizes="57x57"
-        href="images/fav/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60"
-        href="images/fav/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72"
-        href="images/fav/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76"
-        href="images/fav/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114"
-        href="images/fav/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120"
-        href="images/fav/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144"
-        href="images/fav/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152"
-        href="images/fav/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180"
-        href="images/fav/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"
-        href="images/fav/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32"
-        href="images/fav/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96"
-        href="images/fav/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16"
-        href="images/fav/favicon-16x16.png">
-    <link rel="manifest" href="images/fav/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="images/fav/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
-    <script
-        src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-    </script>
+    <link rel="import" href="head-stuff.html">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="scripts/load-header-and-footer-main.js"></script>
 </head>
 
@@ -72,7 +39,7 @@
         <section class="timeline">
             <a href="https://www.csjpr.org/" target="_blank">
                 <div class="timelinebox">
-                    Colegio San Jos&eacute <br>
+                    Colegio San Jos&eacute; <br>
                     <img src="images/CSJ.gif" style="width:170px;padding-top:15px;">
                 </div>
             </a>
@@ -98,7 +65,7 @@
 
         <p>I have many interests and goals regarding how I want my life to
             unravel. Communicating myself to the world
-            might facilitate the obstacles that will be faced further on, so I
+            might facilitate the obstacles that I will face further on, so I
             intend to use this website as a means of communication and dialogue
             with people of similar interests to me, or simply that want to tag
             along and give advice.
@@ -118,21 +85,20 @@
 
         <p>About Me</p>
 
-        <p>Find my R&eacutesum&eacute <u><a
+        <p>Find my R&eacute;sum&eacute; <u><a
             href='https://www.google.com'>here</a></u>.
         </p>
     </section>
 
     <footer id="footer"></footer>
 
-    <script src="scripts/sticky-function.js"></script>
     <script>
         function openNav() {
             $('#mySidenav').css('width', '250px');
             $('#mySidenav').css('display', 'block');
         }
         function closeNav() {
-            document.getElementById('#mySidenav').css('width', '0');
+            $('#mySidenav').css('width', '0');
         }
     </script>
 
