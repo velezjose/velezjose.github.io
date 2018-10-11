@@ -8,13 +8,17 @@
         content="e50Ayqr5Ywb1AS71W1RPwgcIf6hBFP0EZuPa1MegyN0" />
     <title>J.V. - Home</title>
     <link type="text/css" rel="stylesheet" href="style.css">
-    <link rel="import" href="head-stuff.html">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <!-- Load icon library to show a hamburger menu (bars) on small screens -->
+    <!-- Load icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="scripts/load-header-and-footer-main.js"></script>
     <script src="scripts/sidenav.js"></script>
+    <script>
+      $(function() { 
+        $("head").append("head-stuff.html") 
+      });
+    </script>
 </head>
 
 

@@ -4,14 +4,18 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width,
         initial-scale=1.0">
-    <title>J.V. - Physics &amp Math</title>
+    <title>J.V. - Physics &amp; Math</title>
     <link type="text/css" rel="stylesheet" href="../style.css">
-    <link rel="import" href="../head-stuff.html">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../scripts/load-header-and-footer.js"></script>
     <script src="../scripts/sidenav.js"></script>
+    <link rel="import" href="../head-stuff.html">
+    <script>
+      $(function() { 
+        $("head").append("../head-stuff.html") 
+      });
+    </script>
 </head>
-
 
 <body>
     <div id="entire-website-header"></div>
