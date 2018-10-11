@@ -122,9 +122,9 @@ p {
     text-align: center;
     font-size: 80%;
     background-color: #326262; 
-    bottom: 0;
     width: 100%;
-    left: 0;
+    bottom: 0;
+    position: absolute;
 }
 
 .footer-text {
