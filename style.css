@@ -137,8 +137,8 @@ a:active {
     text-decoration: underline;
 }
 
-.about-me {
-    text-align: center;
+.line {
+  border-top: 1px black solid;
 }
 
 .content {
