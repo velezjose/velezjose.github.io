@@ -1,13 +1,17 @@
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 body {
     background-color: #e9e9e9;
     font-family: Avenir, Arial, Geneva, sans-serif;
     font-size: 18px;
     color: black;
-}
-
-* {
-    margin: 0;
-    padding: 0;
+    height: 100%;
+    min-height: 100%;
 }
 
 .topnav {
@@ -140,11 +144,14 @@ a:active {
 .content {
     width: 90%;
     padding: 5%;
+    padding-top: 90px;
     clear: both;
+    min-height: calc(100vh - 228px);
+    position: relative;
 }
 
 p {
-    padding: 20px;
+    padding: 5px 10px;
     clear: both;
 }
 
@@ -215,13 +222,15 @@ p {
     padding-top: 7px;
     text-align: center;
     font-size: 80%;
-    background: linear-gradient(to left, #D7FAC8, #648880, #293f50);
+    background-color: #4ca6a6;
     width: 100%;
-    bottom: 0;
+    z-index: 10;
     position: relative;
 }
 
 .footer-text {
     color: white;
     padding: 6px;
+    padding-bottom: 2px;
+    padding-top: -34px;
 }
