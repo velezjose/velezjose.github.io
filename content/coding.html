@@ -7,7 +7,7 @@
     <title>J.V. - Coding</title>
     <link rel="icon" href="../images/favicon.png">
     <link type="text/css" rel="stylesheet" href="../style.css">
-    <link type="text/css" rel="stylesheet" href="books.css">
+    <link type="text/css" rel="stylesheet" href="coding.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Load icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet"
@@ -23,20 +23,41 @@
     <section class="content">
         <h2>Web Apps</h2>
 
-        <h3>Wikipedia API Web Crawl</h3>
+        <div class="line"></div>
 
+        <h3>Wikipedia API Web Crawl</h3>
+        <p>
+          This search bar crawls randomly through Wikipedia pages. Starting from the first keyword
+          search, a Wikipedia page title will be displayed. Within this page, an embedded link will
+          be found and displayed. Navigating within this newly-found link, another random embedded 
+          link will be found and displayed. So on and so forth, displaying 100 connected Wikipedia pages!
+        </p>
+
+        <p><i>Type a keyword likely to be the title for some Wikipedia page:</i></p>
+
+        <input id="wiki-api" class="wiki-input"></input>
+        <button class="wiki-button">Search</button>
+
+        <div class="line"></div>
 
         <h3>Website Creation and Design</h3>
+        <p>I created and designed these websites:</p>
         <ul>
-          <li><a href="https://workinsuites.com" target="_blank">WorkIn - Co-Working Space and Suites</a></li>
-          <li><a href="http://jporrata.com" target="_blank">J.Porrata - Real Estate Appraiser</a></li>
-          <li><a href="https://jlmsolutionscorp.com" target="_blank">JLM Solutions Corp. - LED Light Vendors</a></li>
+          <li>
+            <a href="https://workinsuites.com" target="_blank">WorkIn - Co-Working Space and Suites</a><br>
+          </li>
+
+          <li>
+            <a href="http://jporrata.com" target="_blank">J.Porrata - Real Estate Appraiser</a>
+          </li>
+
+          <li>
+            <a href="https://jlmsolutionscorp.com" target="_blank">JLM Solutions Corp. - LED Light Vendors</a>
+          </li>
         </ul>
     </section>
 
     <footer id="footer"></footer>
-
-    <script src="../scripts/sticky-function.js"></script>
 </body>
 
 
