@@ -1,0 +1,18 @@
+input.wiki-input {
+  margin-left: 30px;
+  height: 25px;
+  width: 300px;
+  border-radius: 5px;
+  font: 15px "Helvetica Neue", Arial, sans-serif;
+}
+
+button.wiki-button {
+  padding: 5px 10px;
+  border-radius: 10px;
+  font: 15px "Helvetica Neue", Arial, sans-serif;
+  margin-bottom: 30px;
+}
+
+button.wiki-button:active {
+
+}
