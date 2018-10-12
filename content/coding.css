@@ -13,6 +13,7 @@ button.wiki-button {
   margin-bottom: 30px;
 }
 
-button.wiki-button:active {
-
+button:focus,
+input:focus {
+  outline: 0;
 }
