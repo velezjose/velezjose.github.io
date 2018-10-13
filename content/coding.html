@@ -14,6 +14,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../scripts/load-header-and-footer.js"></script>
     <script src="../scripts/sidenav.js"></script>
+    <script src="../scripts/wiki-api.js"></script>
 </head>
 
 <body>
@@ -26,33 +27,41 @@
         <div class="line"></div>
 
         <h3>Wikipedia API Web Crawl</h3>
-        <p>
-          This search bar crawls randomly through Wikipedia pages. Starting from the first keyword
-          search, a Wikipedia page title will be displayed. Within this page, an embedded link will
-          be found and displayed. Navigating within this newly-found link, another random embedded 
-          link will be found and displayed. So on and so forth, displaying 100 connected Wikipedia pages!
-        </p>
+        <p>This search bar crawls randomly through Wikipedia pages:</p>
 
-        <p><i>Type a keyword likely to be the title for some Wikipedia page:</i></p>
+        <ol>
+          <li>Type one or more keywords and press <code>Enter</code>. A Wikipedia page title 
+          that matches it will be displayed with a description</li>
+          <li>Within this Wikipedia page's content, a randomly chosen word will be searched
+            and another matching Wikipedia page will be found and displayed, with
+            its description. </li>
+          <li>So on and so forth, displaying 50 connected Wikipedia pages! (Any problems just
+            refresh the page or try other keywords.)</li>
+        </ol>
 
-        <input id="wiki-api" class="wiki-input"></input>
-        <button class="wiki-button">Search</button>
+        <p><i>Compare how different the first and last output are!</i></p>
+
+        <input id="wiki-input" class="wiki-input" placeholder="Type a word or phrase"></input>
+        <button class="wiki-button" onclick="wikipediaAPICall();">Search</button>
+        <p id="invalid-input" hidden>Invalid input. Try again.</p>
+
+        <ol id="wiki-output" hidden></ol>
 
         <div class="line"></div>
 
         <h3>Website Creation and Design</h3>
         <p>I created and designed these websites:</p>
-        <ul>
+        <ul id="websites">
           <li>
-            <a href="https://workinsuites.com" target="_blank">WorkIn - Co-Working Space and Suites</a><br>
+            <a href="https://workinsuites.com" target="_blank">WorkIn</a> - Co-Working Space and Suites
           </li>
 
           <li>
-            <a href="http://jporrata.com" target="_blank">J.Porrata - Real Estate Appraiser</a>
+            <a href="http://jporrata.com" target="_blank">J.Porrata</a> - Real Estate Appraiser
           </li>
 
           <li>
-            <a href="https://jlmsolutionscorp.com" target="_blank">JLM Solutions Corp. - LED Light Vendors</a>
+            <a href="https://jlmsolutionscorp.com" target="_blank">JLM Solutions Corp.</a> - LED Light Vendors
           </li>
         </ul>
     </section>

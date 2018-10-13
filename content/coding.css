@@ -2,6 +2,7 @@ input.wiki-input {
   margin-left: 30px;
   height: 25px;
   width: 300px;
+  padding: 0px 8px;
   border-radius: 5px;
   font: 15px "Helvetica Neue", Arial, sans-serif;
 }
@@ -16,4 +17,44 @@ button.wiki-button {
 button:focus,
 input:focus {
   outline: 0;
+}
+
+p#invalid-input {
+  color: red;
+  margin-left: 10px;
+  font-family: 'Arial', sans-serif;
+  padding-top: 0px;
+}
+
+ol#wiki-output {
+  max-height: 400px;
+  overflow: auto;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+ol#wiki-output a {
+  font-weight: bold;
+  color: #4ca6a6;
+  text-decoration: underline;
+  padding-bottom: 0px;
+  font-size: 15px;
+  display: inline;
+}
+
+ol#wiki-output a:hover {
+  text-decoration: none;
+}
+
+ol#wiki-output p {
+  padding-top: 0px;
+}
+
+#websites li a {
+  text-decoration: underline;
+  color: #4ca6a6;
+}
+
+#websites li a:hover {
+  text-decoration: none;
 }
