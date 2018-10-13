@@ -207,6 +207,10 @@ p {
     to {background-color: #c1cfcf;}
 }
 
+.left-align {
+  text-align: left;
+}
+
 #footer {
     padding: 5px 0px;
     padding-top: 7px;
