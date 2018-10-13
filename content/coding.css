@@ -28,9 +28,12 @@ p#invalid-input {
 
 ol#wiki-output {
   max-height: 400px;
+  padding-top: 15px;
   overflow: auto;
   font-size: 14px;
   border-radius: 4px;
+  background-color: rgb(229,241,255);
+  border: 2px black solid;
 }
 
 ol#wiki-output a {

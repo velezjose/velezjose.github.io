@@ -57,7 +57,6 @@ function wikipediaAPICall() {
       counter++; 
 
       if (counter < 50) {
-        console.log(counter);
         ajax(pageInfoURL, title, getNewTitle);
       }
     } catch (err) {
