@@ -351,19 +351,22 @@ var outerParseJSON = function() {
 
 
   // -------------------------- Start of execution ----------------------- //
-  debugger;
+
   // Get text input. Clear it from input box. 
   var text = $('input#parseJSON-input').val();
   $('input#parseJSON-input').val('');
+
   // Clear output and the invalid output.
   var $output = $('p#parseJSON-output');
   $output.html('');
   var $invalid = $('p#parseJSON-invalid-input');
   $invalid.html('');
 
-
-
   try {
+
+    if (text === '') {
+      throw new Error('Missing argument. Type a JSON string!');
+    }
 
     // Get useful first index
     var firstIndex = removeWhiteSpace(0, text);
@@ -397,12 +400,13 @@ var outerParseJSON = function() {
 
     $output.prop('hidden', false);
     var json = parseJSON(text);
-    $output.append(`<code>${json}</code>`);
+    $output.append(`<code>${JSON.stringify(json)}</code>`);
 
 
   } catch(e) {
     $invalid.prop('hidden', false);
     $invalid.append(`<p>${e.name}: <code>${text}</code> ${e.message}</p>`);
+    $invalid.css('color', 'red');
     return;
 
   }
