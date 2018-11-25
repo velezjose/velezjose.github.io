@@ -1,5 +1,6 @@
-input.wiki-input {
+input.string-input {
   margin-left: 30px;
+  margin-bottom: 10px;
   height: 25px;
   width: 200px;
   padding: 0px 8px;
@@ -7,12 +8,19 @@ input.wiki-input {
   font: 15px "Helvetica Neue", Arial, sans-serif;
 }
 
-button.wiki-button {
+button.string-button {
   padding: 5px 10px;
   border-radius: 10px;
   font: 15px "Helvetica Neue", Arial, sans-serif;
   margin-bottom: 30px;
   background-color: white;
+}
+
+
+@media screen and (max-width: 400) {
+  input.string-input {
+    margin-left: 10px;
+  }
 }
 
 button:focus,
@@ -54,11 +62,11 @@ ol#wiki-output p {
   padding-top: 0px;
 }
 
-#websites li a {
+.references a {
   text-decoration: underline;
   color: #4ca6a6;
 }
 
-#websites li a:hover {
+.references a:hover {
   text-decoration: none;
 }

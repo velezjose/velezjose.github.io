@@ -15,6 +15,7 @@
     <script src="../scripts/load-header-and-footer.js"></script>
     <script src="../scripts/sidenav.js"></script>
     <script src="../scripts/wiki-api.js"></script>
+    <script src="../scripts/parseJSON.js"></script>
 </head>
 
 <body>
@@ -26,11 +27,44 @@
 
         <div class="line"></div>
 
+        <h3><code>JSON.parse()</code> Implementation</h3>
+        <p class="references">
+          <a href="https://github.com/velezjose/velezjose.github.io/tree/master/scripts/parseJSON.js" target="_blank">View source code</a></p>
+
+        <p class="references">A <a class="references" 
+          href="https://medium.com/@Mordoc/a-recursive-descent-parser-for-json-a6d68ab938ac" target="_blank">recursive
+          descent parsing</a> technique is used to implement JavaScript's JSON
+          parser. <code>JSON.stringify()</code> only stringifies: objects
+          (including arrays), numbers, strings, booleans and
+          <code>null</code>. <b>NOT</b> functions,  <code>undefined</code>,
+          or <code>NaN</code>.
+        </p>
+
+        <p>
+          Type in any JSON-stringified JavaScript value and click 
+          <code>Parse</code>!
+        </p>
+
+        <div class="input-holder">
+          <input id="parseJSON-input" class="string-input"
+            placeholder="Type a JS stringified value"></input>
+          <button class="string-button" onclick="outerParseJSON();">Parse</button>
+        </div>  
+
+        <p id="parseJSON-output" hidden></p>
+        <p id="parseJSON-invalid-input" hidden></p>
+
+
+        <div class="line"></div>
+
         <h3>Wikipedia API Web Crawler</h3>
+
+        <p class="references"><a href="https://github.com/velezjose/velezjose.github.io/blob/master/scripts/wiki-api.js" target="_blank">View source code</a></p>
+        
         <p>This search bar crawls randomly through Wikipedia pages:</p>
 
         <ol>
-          <li>Type one or more keywords and press <code>Enter</code>. A Wikipedia page title 
+          <li>Type one or more keywords and click <code>Search</code>. A Wikipedia page title 
           that matches it will be displayed with a description</li>
           <li>Within this Wikipedia page's content, a randomly chosen word will be searched
             and another matching Wikipedia page will be found and displayed, with
@@ -41,9 +75,13 @@
 
         <p><i>Compare the first and last outputs!</i></p>
 
-        <input id="wiki-input" class="wiki-input" placeholder="Type a word or phrase"></input>
-        <button class="wiki-button" onclick="wikipediaAPICall();">Search</button>
-        <p id="invalid-input" hidden>Invalid input. Try again.</p>
+        <div class="input-holder">
+          <input id="wiki-input" class="string-input" 
+            placeholder="Type a word or phrase"></input>
+          <button class="string-button" onclick="wikipediaAPIFetch();">Search</button>
+        </div>
+
+        <p id="wiki-invalid-input" hidden>Invalid input. Try again.</p>
 
         <ol id="wiki-output" hidden></ol>
 
@@ -51,17 +89,20 @@
 
         <h3>Website Creation and Design</h3>
         <p>I created and designed these websites:</p>
-        <ul id="websites">
+        <ul class="references">
           <li>
-            <a href="https://workinsuites.com" target="_blank">WorkIn</a> - Co-Working Space and Suites
+            <a href="https://workinsuites.com" target="_blank">WorkIn</a>
+            - Co-Working Space and Suites
           </li>
 
           <li>
-            <a href="http://jporrata.com" target="_blank">J.Porrata</a> - Real Estate Appraiser
+            <a href="http://jporrata.com" target="_blank">J.Porrata</a>
+            - Real Estate Appraiser
           </li>
 
           <li>
-            <a href="https://jlmsolutionscorp.com" target="_blank">JLM Solutions Corp.</a> - LED Light Vendors
+            <a href="https://jlmsolutionscorp.com" target="_blank">JLM Solutions Corp.</a>
+            - LED Light Vendors
           </li>
         </ul>
     </section>
