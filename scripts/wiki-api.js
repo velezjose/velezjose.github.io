@@ -78,14 +78,12 @@ var wikipediaAPIFetch = function() {
     // If, when startSearch(), user inputs word or phrase that displays 0 
     // results, let user know they have input an invalid title.
     if (counter === 0 && title === undefined) {
-      $('p#wiki-invalid-input').prop('hidden', false);
-      $('ol#wiki-output').prop('hidden', true);
+      $invalidInput.prop('hidden', false);
+      $invalidInput.html('Invalid input. Try again.');
+      $wikiOutput.prop('hidden', true);
       return;
 
-    } else {
-      $('p#wiki-invalid-input').prop('hidden', true);
-
-    }
+    } 
 
 
     try {
@@ -94,8 +92,8 @@ var wikipediaAPIFetch = function() {
       }
 
       // Use templating to insert href, title and description.
-      $('ol#wiki-output').append(`<li><a href="${href}" target="_blank">${title}</a>`);
-      $('ol#wiki-output').append(`<p class="description">${desc}</p></li>`);
+      $wikiOutput.append(`<li><a href="${href}" target="_blank">${title}</a>`);
+      $wikiOutput.append(`<p class="description">${desc}</p></li>`);
       counter++; 
 
     } catch (e) {
@@ -142,22 +140,38 @@ var wikipediaAPIFetch = function() {
 
   // Get input text.
   var text = $('input#wiki-input').val();
-
-
-  // Clear input text.
   $('input#wiki-input').val('');
+
+  // Declare variables that will be used.
+  var $wikiOutput = $('ol#wiki-output');
+  var $invalidInput = $('p#wiki-invalid-input');
   var counter = 0;
   var prevWordArray = [];
   var extension;
 
 
-  // Do not hide the <ol> div to be able to display results.
-  $('ol#wiki-output').html('');
-  $('ol#wiki-output').prop('hidden', false);
+  // Expose the <ol> div to be able to display results.
+  $wikiOutput.html('');
+  $wikiOutput.prop('hidden', false);
 
+  // Set the CSS font color red for invalid input response.
+  $invalidInput.prop('hidden', true);
+  $invalidInput.css('color', 'red');
 
-  // Start the search
-  fetch(searchURL, text, appendToDOM);
+  try {
+    if (text === '') {
+      throw new Error('Missing word or phrase. Type something!')
+    }
+
+    // Start the search
+    fetch(searchURL, text, appendToDOM);
+
+  } catch(e) {
+    $wikiOutput.prop('hidden', true);
+    $invalidInput.prop('hidden', false);
+    $invalidInput.html(`${e.name}: ${e.message}`);
+
+  }
 
   // --------------------------- End of execution ----------------------- //
   
