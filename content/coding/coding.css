@@ -70,3 +70,13 @@ ol#wiki-output p {
 .references a:hover {
   text-decoration: none;
 }
+
+img.tiny-url-img {
+  width: 270px;
+  height: 300px;
+}
+
+span {
+  float: left;
+  padding: 0px 10px;
+}
