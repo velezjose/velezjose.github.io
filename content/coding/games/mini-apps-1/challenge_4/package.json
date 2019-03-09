@@ -1,0 +1,31 @@
+{
+  "name": "connect-four",
+  "version": "1.0.0",
+  "description": "Mini app to play connect four.",
+  "main": "server.js",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.8",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "scripts": {
+    "react-dev": "webpack -d --watch"
+  },
+  "author": "Jose Velez",
+  "license": "ISC"
+}

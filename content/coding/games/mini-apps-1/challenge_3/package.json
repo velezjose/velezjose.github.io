@@ -1,0 +1,27 @@
+{
+  "name": "multistep-checkout-experience",
+  "version": "1.0.0",
+  "description": "This mini app takes a user throughout every page of the checking out process.",
+  "main": "server.js",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "express": "^4.16.4",
+    "mongodb": "^3.1.10",
+    "mongoose": "^5.3.16",
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.8",
+    "react": "^0.14.9",
+    "react-dom": "^0.14.7"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.2.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-react": "^6.24.1"
+  },
+  "scripts": {
+    "start": "nodemon --inspect server.js",
+    "rebuild": "babel --watch client --out-dir public/compiled/ --presets=env,react --source-maps inline"
+  },
+  "author": "Jose Velez",
+  "license": "ISC"
+}

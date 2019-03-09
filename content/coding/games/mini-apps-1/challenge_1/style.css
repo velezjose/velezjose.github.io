@@ -1,0 +1,39 @@
+body {
+  background-color: #bcd4e6;
+  font-family: Arial, sans-serif;
+}
+
+h2, h3, p, table, #app, #new {
+  margin-left: 50px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr, th {
+  border: black 1px solid;
+}
+
+th {
+  width: 80px;
+}
+
+tr {
+  height: 30px;
+}
+
+#new {
+  margin-top: 20px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  font-size: 40px;
+}
+
+#winner {
+  font-size: 50px;
+  font-weight: bold;
+}
