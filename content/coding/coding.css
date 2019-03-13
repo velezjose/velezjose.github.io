@@ -80,3 +80,8 @@ span {
   float: left;
   padding: 0px 10px;
 }
+
+img.hypechat {
+  width: 500px;
+  height: 385px;
+}
