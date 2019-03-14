@@ -136,6 +136,11 @@ a:active {
   border-top: 2px black solid;
 }
 
+#img-slideshow > span > p {
+    font-style: italic;
+    font-size: 14px;
+}
+
 .content {
     width: 90%;
     padding: 5%;
