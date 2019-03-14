@@ -51,8 +51,12 @@ body {
 }
 
 @media screen and (max-width: 949px) {
-    .topnav a:not(#first-child):not(.hamburger), .sidenav {
+    .topnav a:not(#first-child):not(.hamburger) {
         display: none;
+    }
+    
+    .sidenav {
+        display: block;
     }
 
     .topnav a.hamburger {
@@ -68,6 +72,7 @@ body {
         overflow-x: hidden;
         transition: 0.5s;
         padding-top: 30px;
+        margin-top: -15px;
         position: fixed;
     }
 
