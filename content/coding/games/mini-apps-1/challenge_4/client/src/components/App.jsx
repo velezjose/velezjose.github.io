@@ -1,7 +1,7 @@
 import React from 'react';
 import Table from './Table.jsx';
 
-import { getInitialTable, getColIndexesToFill } from '../utils/helpers.js';
+import { getInitialTable, getColIndexesToFill, ROWS, COLUMNS, } from '../utils/helpers.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -24,6 +24,8 @@ class App extends React.Component {
     this.checkDiagonals = this.checkDiagonals.bind(this);
     this.checkMajorDiagonal = this.checkMajorDiagonal.bind(this);
     this.checkMinorDiagonal = this.checkMinorDiagonal.bind(this);
+    this.getMajorDiagonalTopRowCol = this.getMajorDiagonalTopRowCol.bind(this);
+    this.getMinorDiagonalTopRowCol = this.getMinorDiagonalTopRowCol.bind(this);
     this.restartGame = this.restartGame.bind(this);
   }
 
@@ -54,7 +56,9 @@ class App extends React.Component {
   }
 
   checkWinningConditions(newHasWon, newTable, colorCode, rowIndex, colIndex) {
-    let someoneWon = this.checkRow(newTable, colorCode, rowIndex) || this.checkColumn(newTable, colorCode, colIndex) || this.checkDiagonals(newTable, colorCode, colIndex, rowIndex);
+    let someoneWon = this.checkRow(newTable, colorCode, rowIndex) || 
+      this.checkColumn(newTable, colorCode, colIndex) || 
+      this.checkDiagonals(newTable, colorCode, colIndex, rowIndex);
 
     if (someoneWon) {
       newHasWon.someone = true;
@@ -119,7 +123,14 @@ class App extends React.Component {
   }
 
   checkDiagonals(newTable, colorCode, colIndex, rowIndex) {
-    return this.checkMajorDiagonal(newTable, colorCode, colIndex, rowIndex) || this.checkMinorDiagonal(newTable, colorCode, colIndex, rowIndex);
+    let { majorDiagColIdx, majorDiagRowIdx } = this.getMajorDiagonalTopRowCol(colIndex, rowIndex);
+    let { minorDiagColIdx, minorDiagRowIdx } = this.getMinorDiagonalTopRowCol(colIndex, rowIndex);
+
+    console.log('majorDiagColIdx, majorDiagRowIdx', majorDiagColIdx, majorDiagRowIdx);
+    console.log('minorDiagColIdx, minorDiagRowIdx', minorDiagColIdx, minorDiagRowIdx);
+
+    return this.checkMajorDiagonal(newTable, colorCode, majorDiagColIdx, majorDiagRowIdx) || this.checkMinorDiagonal(newTable, colorCode, minorDiagColIdx, minorDiagRowIdx);
+    // return this.checkMajorDiagonal(newTable, colorCode, colIndex, rowIndex) || this.checkMinorDiagonal(newTable, colorCode, colIndex, rowIndex);
   }
 
   checkMajorDiagonal(newTable, colorCode, colIndex, rowIndex) {
@@ -142,6 +153,24 @@ class App extends React.Component {
     }
 
     return false;
+  }
+
+  getMajorDiagonalTopRowCol(colIdx, rowIdx) {
+    let minDist = Math.min(rowIdx, colIdx);
+    
+    return { 
+      majorDiagColIdx: colIdx - minDist,
+      majorDiagRowIdx: rowIdx - minDist,
+    };
+  }
+
+  getMinorDiagonalTopRowCol(colIdx, rowIdx) {
+    let minDist = Math.min(rowIdx, COLUMNS - 1 - colIdx);
+
+    return { 
+      minorDiagColIdx: colIdx + minDist,
+      minorDiagRowIdx: rowIdx - minDist,
+    };
   }
 
   getNextRowIndex(colIndex) {

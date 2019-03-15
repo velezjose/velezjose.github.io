@@ -20,4 +20,4 @@ const getColIndexesToFill = () => {
   return colIndexesToFill;
 };
 
-export { getInitialTable, getColIndexesToFill };
+export { getInitialTable, getColIndexesToFill, ROWS, COLUMNS, };
