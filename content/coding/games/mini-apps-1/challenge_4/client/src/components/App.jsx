@@ -125,12 +125,7 @@ class App extends React.Component {
   checkDiagonals(newTable, colorCode, colIndex, rowIndex) {
     let { majorDiagColIdx, majorDiagRowIdx } = this.getMajorDiagonalTopRowCol(colIndex, rowIndex);
     let { minorDiagColIdx, minorDiagRowIdx } = this.getMinorDiagonalTopRowCol(colIndex, rowIndex);
-
-    console.log('majorDiagColIdx, majorDiagRowIdx', majorDiagColIdx, majorDiagRowIdx);
-    console.log('minorDiagColIdx, minorDiagRowIdx', minorDiagColIdx, minorDiagRowIdx);
-
     return this.checkMajorDiagonal(newTable, colorCode, majorDiagColIdx, majorDiagRowIdx) || this.checkMinorDiagonal(newTable, colorCode, minorDiagColIdx, minorDiagRowIdx);
-    // return this.checkMajorDiagonal(newTable, colorCode, colIndex, rowIndex) || this.checkMinorDiagonal(newTable, colorCode, colIndex, rowIndex);
   }
 
   checkMajorDiagonal(newTable, colorCode, colIndex, rowIndex) {
