@@ -210,6 +210,7 @@ class App extends React.Component {
         someone: false,
         player1: false
       },
+      isTied: false,
     });
   }
 
