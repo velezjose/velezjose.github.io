@@ -14,7 +14,8 @@ class App extends React.Component {
       hasWon: {
         someone: false,
         player1: false
-      } 
+      },
+      isTied: false,
     };
 
     this.onCircleClickHandler = this.onCircleClickHandler.bind(this);
@@ -26,6 +27,7 @@ class App extends React.Component {
     this.checkMinorDiagonal = this.checkMinorDiagonal.bind(this);
     this.getMajorDiagonalTopRowCol = this.getMajorDiagonalTopRowCol.bind(this);
     this.getMinorDiagonalTopRowCol = this.getMinorDiagonalTopRowCol.bind(this);
+    this.checkForTies = this.checkForTies.bind(this);
     this.restartGame = this.restartGame.bind(this);
   }
 
@@ -48,6 +50,11 @@ class App extends React.Component {
     let newHasWon = Object.assign({}, this.state.hasWon);
     this.checkWinningConditions(newHasWon, newTable, newTable[nextRowIndex][colIndex], nextRowIndex, colIndex);
 
+        
+    if (this.checkForTies(this.state.columnFillTracker)) {
+      this.setState({ isTied: true });
+    }
+
     this.setState({
       player1sTurn: !this.state.player1sTurn,
       table: newTable,
@@ -59,7 +66,7 @@ class App extends React.Component {
     let someoneWon = this.checkRow(newTable, colorCode, rowIndex) || 
       this.checkColumn(newTable, colorCode, colIndex) || 
       this.checkDiagonals(newTable, colorCode, colIndex, rowIndex);
-
+          
     if (someoneWon) {
       newHasWon.someone = true;
       newHasWon.player1 = this.state.player1sTurn;
@@ -184,6 +191,16 @@ class App extends React.Component {
     return this.state.columnFillTracker[colIndex];
   }
 
+  checkForTies(arr) {
+    let numMinusOnes = 0, numZeros = 0;
+    arr.forEach(num => {
+      if (num === -1) numMinusOnes += 1;
+      if (num === 0) numZeros += 1;
+    });
+
+    return (numMinusOnes === COLUMNS - 1) && (numZeros === 1);
+  }
+
   restartGame() {
     this.setState({
       table: getInitialTable(),
@@ -214,6 +231,14 @@ class App extends React.Component {
           !this.state.hasWon.someone ? null :
             <>
               <p style={winningFontStyle}>{color} has won!</p>
+              <button style={resetButtonStyle} onClick={this.restartGame}>Restart Game</button>
+            </>
+        }
+
+        {
+          !this.state.isTied ? null : 
+            <>
+              <p style={Object.assign(winningFontStyle, { color: 'black', marginLeft: 195 })}>Tie game!</p>
               <button style={resetButtonStyle} onClick={this.restartGame}>Restart Game</button>
             </>
         }
