@@ -150,7 +150,7 @@ a:active {
 
 @media screen and (max-width:600px) {
     #img-slideshow > span > img {
-        height: 250px;
+        height: 220px;
         width: auto;
     }
 }
