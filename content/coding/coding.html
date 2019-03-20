@@ -26,9 +26,70 @@
 
     <section class="content left-align">
         <h2>Web Apps</h2>
+      
+        <div class='line'></div><!------------------------------------------------------------------------------------------------->
 
 
-        <div class="line"></div><!------------------------------------------------------------------------------------------------->
+        <h3>Grubby Hub's Restaurant Profile Microservice Scaling</h3>
+        <p class='references'><a href='https://github.com/GrubbyPlutos/Restaurant-Profile-Service' target='_blank'>View source code</a></p>
+
+        <p>
+          Grubby Hub is a food ordering app. I redesigned its Restaurant Profile Microservice and scaled it using AWS EC2
+          instances to handle high(er) traffic.
+        </p>
+
+        <ol>
+            <li>Nginx Load Balancing Server</li>
+            <li>5 Host servers</li>
+            <li>Redis Caching</li>
+            <li>PostgreSQL database instance</li>
+        </ol>
+
+        <p>
+          It was scaled to reach a throughput of +2.5 K RPS (up from 400 RPS) with average response latency of 3 ms 
+          (down from 400+ ms).<br/><br/> More details (with pictures!) in my 
+          <a style='color: #4ca6a6;' href='https://github.com/GrubbyPlutos/Restaurant-Profile-Service' target='_blank'>Github page.</a>
+        </p>
+
+        
+        <div class='line'></div><!------------------------------------------------------------------------------------------------->
+
+
+        <h3>Anazom E-Commerce Product Details Microservice</h3>
+        <p class='references'><a href='https://github.com/Quesarito/product-service' target='_blank'>View source code</a></p>
+
+        <p>
+          Anazom is an e-commerce platform. I built its entire Product Details Microservice. This project was more focused
+          on frontend. It was deployed in AWS EC2 using Docker for containerization.
+        </p>
+
+        <p>
+          More Description (with cool pictures!) in my 
+          <a style='color: #4ca6a6;' href='https://github.com/Quesarito/product-service' target='_blank'>Github page.</a>
+        </p>
+
+        <span>
+            <p>Main component rendering product:</p>
+            <img src='https://github.com/Quesarito/product-service/raw/master/screenshots/01-Product-Service.png' class='anazom-img'></img>
+        </span>
+
+        <span>
+            <p>Different image rendered:</p>
+            <img src='https://github.com/Quesarito/product-service/raw/master/screenshots/02-Product-Service.png' class='anazom-img'></img>
+        </span>
+
+        <span>
+            <p>Review Stars Weighted Graphics animates and fills up:</p>
+            <img src='https://github.com/Quesarito/product-service/raw/master/screenshots/03-Reviews-Stars-Graphics.png' class='anazom-img'></img>
+        </span>
+
+        <span>
+            <p>Hover-over Image Magnification:</p>
+            <img src='https://github.com/Quesarito/product-service/raw/master/screenshots/04-Hover-Over-Magnification.png' class='anazom-img'></img>
+        </span>
+
+
+        <div class='line' style='clear:both;'></div><!------------------------------------------------------------------------------------------------->
 
       
         <h3>JJ.ly - URL Shortener</h3>
@@ -90,7 +151,7 @@
         <p class="references"><a href="https://github.com/velezjose/HypeChat/tree/react" target="_blank">View source code</a></p>
 
         <p>
-          HypeChat is a chat messaging app that uses <a href='https://socket.io/'>Socket.io's</a> WebSockets client-side and
+          HypeChat is a chat messaging app that uses <a style='color: #4ca6a6;' href='https://socket.io/'>Socket.io's</a> WebSockets client-side and
           server-side API to create a websocket connection between users that connect to the same URL (<i>localhost:3030</i>
           when run locally). When a user first goes to the homepage, he/she will have to connect with a username, which will
           be broadcasted or "emitted" from the client-side. Then, he/she will be redirected to the messaging feed. Every new
