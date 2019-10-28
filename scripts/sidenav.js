@@ -2,7 +2,6 @@
 $( document ).ready(() => {
     let w = $( window ).width();
     let sideNavHidden = $('#sidenav').prop('hidden');
-    let mySideNavHidden = $('#mySidenav').prop('hidden');
 
     if (w <= 949 && sideNavHidden === true) {
         $('#sidenav').prop('hidden', false);
@@ -15,7 +14,6 @@ $( document ).ready(() => {
     $( window ).resize(() => {
         let w = $( window ).width();
         let sideNavHidden = $('#sidenav').prop('hidden');
-        let mySideNavHidden = $('#mySidenav').prop('hidden');
     
         if (w <= 949 && sideNavHidden === true) {
             $('#sidenav').prop('hidden', false);
@@ -25,7 +23,7 @@ $( document ).ready(() => {
             $('#sidenav').prop('hidden', true);
         }
     });
-    
+
 });
 
 
